@@ -23,6 +23,31 @@ module GoogleReaderApi
       "<<Entry: #{@entry.title.content} >>"
     end
     
+    def id
+      @entry.id.content
+    end
+    
+    def title
+      @entry.title.content
+    end
+    
+    def content
+      begin
+        @entry.content.content
+      rescue 
+        ""
+      end
+    end
+    
+    def summary
+      begin
+        @entry.summary.content
+      rescue 
+        ""
+      end
+    end
+    
+    
     private 
   
     def edit_tag(tag_identifier)

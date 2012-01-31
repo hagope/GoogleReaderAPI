@@ -1,4 +1,6 @@
-require "google-reader-api/rss_utils"
+$LOAD_PATH.unshift File.dirname(__FILE__)
+
+require "google-reader-api/rss_utils.rb"
 require "google-reader-api/api"
 require "google-reader-api/cache"
 require "google-reader-api/entry"
