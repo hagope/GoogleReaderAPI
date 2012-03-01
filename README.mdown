@@ -1,6 +1,17 @@
 GoogleReaderAPI
 ===============
 
+Changes in this Fork
+--------------------
+
+`user.subscription.tags` returns an array of JSON of tags (aka folders, labels) for the authenticated user
+`clean_tags` returns an array of tag names only
+
+Also, this for fixes a bug in escaping spaces.
+
+License
+-------
+
 A Google Reader api. Programmed in ruby. This is an unofficial api.
 Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 

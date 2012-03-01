@@ -50,6 +50,18 @@ module GoogleReaderApi
       create_entries(@api.get_link "atom/user/-/label/#{label.gsub!(" ","%20")}")
     end
 
+    def tags
+      json = JSON[@api.get_link 'api/0/tag/list', :output => :json]['tags']
+    end
+
+    def clean_tags
+      tag_array = []
+      tags.each do |tag|
+        tag_array << tag["id"].split("/").last
+      end
+      return tag_array
+    end
+
     def feeds
       @feeds
     end
