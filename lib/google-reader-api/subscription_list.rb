@@ -47,7 +47,7 @@ module GoogleReaderApi
     
     # will return an array of entries with label
     def items_with_label(label)
-      create_entries(@api.get_link "atom/user/-/label/#{label.gsub!(" ","%20")}")
+      create_entries(@api.get_link "atom/user/-/label/#{label.gsub(" ","%20")}")
     end
 
     def tags
